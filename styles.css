@@ -108,7 +108,7 @@ header.site-header {
 /* --- Hero --- */
 .hero {   
   position: relative; min-height: 70vh; display: grid; place-items: center;   
-  background: url('https://tse1.mm.bing.net/th/id/OIP.4mYOa9IopghTADRN9pmZHwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat fixed;   
+  background: url('img/main.webp') center/cover no-repeat fixed;   
   isolation: isolate; 
 } 
 .hero::after {   
