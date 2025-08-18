@@ -114,8 +114,28 @@ header.site-header {
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.18); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-.card .thumb {
-  aspect-ratio: 16/9; background: url('https://tse1.mm.bing.net/th/id/OIP.4mYOa9IopghTADRN9pmZHwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
+.card .muscu {
+  aspect-ratio: 16/9; background: url('img/muscu.jpg') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+}
+.card .boxe{
+  aspect-ratio: 16/9; background: url('img/box.webp') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+}
+.card .gym {
+  aspect-ratio: 16/9; background: url('img/gym.avif') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+}
+.card .prod {
+  aspect-ratio: 16/9; background: url('img/prod.webp') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+}
+.card .loc {
+  aspect-ratio: 16/9; background: url('img/loc.jpg') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+}
+.card .fit {
+  aspect-ratio: 16/9; background: url('img/fit.webp') center/cover no-repeat;
   filter: saturate(1.1) contrast(1.05);
 }
 .card .body { padding: 1rem 1.1rem 1.2rem; }
