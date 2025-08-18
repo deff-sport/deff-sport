@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact • ActiveZone Fitness</title>
+  <title>Contact • Deff | Sport</title>
   <meta name="description" content="ActiveZone — Musculation, fitness, boxe, gym et vente de produits. Votre salle de sport à Rufisque (Zac Mbao, rond-point Sipress)."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,51 +29,41 @@
     </div>
   </header>
 
-  <section class="section">
+  <!-- ===== Section Contact simplifiée ===== -->
+  <section class="section contact-section">
     <div class="container">
       <div class="section-header reveal">
         <h2>Nous contacter</h2>
-        <p>Une question ? Une inscription ? Écris-nous — on te répond rapidement.</p>
+        <p>Une question ? Une inscription ? Remplis le formulaire ci-dessous — on te répond rapidement.</p>
       </div>
 
-      <div class="grid">
-        <div class="card reveal" style="grid-column: span 6;">
-          <div class="body">
-            <h3>Infos</h3>
-            <p class="small">Email : <a href="mailto:contact@activezone.sn">contact@activezone.sn</a></p>
-            <p class="small">Adresse : Rufisque, Zac Mbao, rond-point Sipress</p>
-            <p class="small">Instagram : <a href="https://instagram.com/activezone.sn" target="_blank" rel="noopener">@activezone.sn</a></p>
-            <div class="thumb" style="margin-top:.8rem; border-radius:.8rem;"></div>
-          </div>
-        </div>
-        <div class="card reveal" style="grid-column: span 6;">
-          <div class="body">
-            <h3>Formulaire d'inscription</h3>
-            <form id="contactForm">
-              <div style="display:grid; gap:.7rem;">
-                <input required type="text" id="name" placeholder="Nom complet" style="padding:.9rem; border-radius:.7rem; border:1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--light);"/>
-                <input required type="email" id="email" placeholder="Email" style="padding:.9rem; border-radius:.7rem; border:1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--light);"/>
-                <input type="tel" id="phone" placeholder="Téléphone (optionnel)" style="padding:.9rem; border-radius:.7rem; border:1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--light);"/>
-                <select id="objective" required style="padding:.9rem; border-radius:.7rem; border:1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--light);">
-                  <option value="">Objectif</option>
-                  <option>Perte de poids</option>
-                  <option>Prise de masse</option>
-                  <option>Remise en forme</option>
-                  <option>Performance</option>
-                  <option>Boxe</option>
-                </select>
-                <textarea id="message" rows="4" placeholder="Ton message (facultatif)" style="padding:.9rem; border-radius:.7rem; border:1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--light);"></textarea>
-                <button class="btn" type="submit">Envoyer</button>
-                <p id="formStatus" class="small" role="status" aria-live="polite"></p>
-              </div>
-            </form>
-          </div>
+      <div class="card reveal" style="max-width:600px; margin:0 auto;">
+        <div class="body">
+          <h3>Formulaire d'inscription</h3>
+          <form id="contactForm">
+            <div style="display:grid; gap:.7rem;">
+              <input required type="text" id="name" placeholder="Nom complet"/>
+              <input required type="email" id="email" placeholder="Email"/>
+              <input type="tel" id="phone" placeholder="Téléphone (optionnel)"/>
+              <select id="objective" required>
+                <option value="">Objectif</option>
+                <option>Perte de poids</option>
+                <option>Prise de masse</option>
+                <option>Remise en forme</option>
+                <option>Performance</option>
+                <option>Boxe</option>
+              </select>
+              <textarea id="message" rows="4" placeholder="Ton message (facultatif)"></textarea>
+              <button class="btn" type="submit">Envoyer</button>
+              <p id="formStatus" class="small" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <div class="container">
       <div class="grid">
@@ -81,7 +71,7 @@
           <div class="body">
             <h3>Heures d'ouverture</h3>
             <p class="small">Lun–Sam : 6h–22h • Dim : 8h–20h</p>
-            <span class="badge">Couleurs officielles : #e09200 & #1f1c17</span>
+            <!-- <span class="badge">Couleurs officielles : #e09200 & #1f1c17</span> -->
           </div>
         </div>
         <div class="card" style="grid-column: span 6;">
@@ -93,7 +83,7 @@
           </div>
         </div>
       </div>
-      <p class="small" style="margin-top:1rem;">© <span id="year"></span> ActiveZone — Tous droits réservés.</p>
+      <p class="small" style="margin-top:1rem;">© <span id="year"></span> Deff | Sport — Tous droits réservés.</p>
     </div>
   </footer>
   <script src="script.js"></script>
