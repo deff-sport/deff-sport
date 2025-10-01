@@ -157,6 +157,7 @@ header.site-header {
 .card .gym,
 .card .prod,
 .card .loc,
+.card .lava,
 .card .fit {   
   aspect-ratio: 16/9; 
   background-size: cover !important; 
@@ -171,6 +172,7 @@ header.site-header {
 .card .prod { background-image: url('img/prod.webp'); }
 .card .loc { background-image: url('img/loc.jpg'); }
 .card .fit { background-image: url('img/fit.webp'); }
+.card .lava { background-image: url('img/lava.jpg'); }
 
 .card .body { padding: 1rem 1.1rem 1.2rem; } 
 .card .body h3 { margin: 0 0 .4rem 0; } 
