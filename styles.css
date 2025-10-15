@@ -93,7 +93,10 @@ header.site-header {
 .menu-toggle { 
   display:none; background: none; border: none; color: var(--light); font-size: 2rem; 
 }  
-
+.r{
+  display: none;
+  transition: 0.4s;
+}
 @media (max-width: 820px) {   
   .menu-toggle { display:block; }   
   .navlinks {     
@@ -166,9 +169,9 @@ header.site-header {
   filter: saturate(1.1) contrast(1.05); 
 } 
 
-.card .muscu { background-image: url('img/muscu.jpg'); }
+.card .muscu { background-image: url('img/muscul.jpg'); }
 .card .boxe { background-image: url('img/box.webp'); }
-.card .gym { background-image: url('img/gym.avif'); }
+.card .gym { background-image: url('img/ekipmnt.jpg'); }
 .card .prod { background-image: url('img/prod.webp'); }
 .card .loc { background-image: url('img/loc.jpg'); }
 .card .fit { background-image: url('img/fit.webp'); }
@@ -321,4 +324,545 @@ footer {
 
 .contact-section form button:hover {
   background: #ffa500; /* un orange un peu plus clair au hover */
+}
+/* AJOUTS CSS POUR LES NOUVELLES SECTIONS */
+
+/* Section Pourquoi nous choisir */
+.feature-card {
+  grid-column: span 12;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: rgba(224, 146, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+@media (min-width: 641px) {
+  .feature-card {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 921px) {
+  .feature-card {
+    grid-column: span 3;
+  }
+}
+
+/* Section Équipements */
+.dark-section {
+  background: linear-gradient(180deg, rgba(16,14,11,1), rgba(31,28,23,.95));
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.equipment-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.equipment-item {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .3s ease;
+}
+
+.equipment-item:hover {
+  transform: translateY(-5px);
+}
+
+.equipment-image {
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.equipment-item h3 {
+  margin: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+.equipment-item p {
+  margin: 0 1rem 1rem;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Section Pricing */
+.pricing-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.pricing-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-radius: 1.2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,.08);
+  position: relative;
+  transition: transform .3s ease, border-color .3s ease;
+  text-align: center;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,.15);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--dark);
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pricing-header {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.price small {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-features .fa-check {
+  color: #4CAF50;
+}
+
+.pricing-features .fa-times {
+  color: #f44336;
+  opacity: 0.6;
+}
+
+/* Section Stats */
+.stats-section {
+  background: linear-gradient(135deg, rgba(224,146,0,.1), rgba(31,28,23,.8));
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+/* Section FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.08);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(255,255,255,.05);
+}
+
+.faq-question i {
+  transition: transform .3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  max-height: 200px;
+}
+
+/* Animations supplémentaires */
+@keyframes countUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.stat-number.animated {
+  animation: countUp 0.6s ease-out;
+}
+
+/* Styles CSS supplémentaires pour les nouvelles animations */
+
+/* Back to top button */
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(224, 146, 0, 0.3);
+}
+
+/* Animation pour les cartes de pricing */
+.pricing-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation des icônes */
+.feature-icon {
+  transition: all 0.3s ease;
+}
+
+/* Effet de profondeur pour la hero */
+.hero {
+  transition: transform 0.1s ease-out;
+}
+
+/* Animation typing */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--primary);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Délais d'animation pour les éléments en grid */
+.reveal:nth-child(2) { animation-delay: 0.1s; }
+.reveal:nth-child(3) { animation-delay: 0.2s; }
+.reveal:nth-child(4) { animation-delay: 0.3s; }
+.reveal:nth-child(5) { animation-delay: 0.4s; }
+.reveal:nth-child(6) { animation-delay: 0.5s; }
+
+/* Animation de bounce léger pour les CTA */
+.btn {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Loading states pour le formulaire */
+.form-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.form-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+/* --- 🔥 RESPONSIVITÉ MAXIMALE (micro-écrans, iPhone SE, Galaxy A01, etc.) --- */
+@media (max-width: 360px) {
+
+  html, body {
+    font-size: 13.5px; /* adapte la taille globale sans écraser les bordures */
+    overflow-x: hidden; /* supprime tout défilement horizontal parasite */
+  }
+
+  .container {
+    width: 94vw !important; /* garde un léger espace de respiration */
+    margin-inline: auto;
+    padding-inline: 0.5rem; /* évite que les bords soient coupés */
+  }
+
+  header.site-header {
+    padding: .3rem 0;
+  }
+
+  .brand img {
+    height: 24px;
+  }
+
+  .brand .name b {
+    font-size: .85rem;
+  }
+  .brand .name span {
+    font-size: .68rem;
+  }
+
+  .nav {
+    padding: .3rem .4rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.7rem;
+  }
+
+  .navlinks {
+    padding: .8rem .4rem;
+    gap: .4rem;
+  }
+
+  .navlinks a {
+    padding: .4rem .6rem;
+    font-size: .9rem;
+  }
+
+  .hero {
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .hero .content {
+    padding: 1.8rem .6rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.3rem, 5vw, 2.2rem);
+  }
+
+  .hero p {
+    font-size: .9rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    font-size: .9rem;
+    padding: .8rem 1rem;
+    border-radius: 1.2rem;
+    margin-top: .4rem;
+  }
+
+  .section {
+    padding: 1.8rem 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-header p {
+    font-size: .9rem;
+  }
+
+  .grid,
+  .features,
+  .pricing-grid,
+  .stats-grid,
+  .testimonials,
+  .equipment-grid {
+    grid-template-columns: 1fr !important;
+    gap: .8rem;
+  }
+
+  .card,
+  .feature-card,
+  .pricing-card,
+  .equipment-item,
+  .testimonial,
+  .faq-item {
+    border-radius: .9rem;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .card .body {
+    padding: .8rem;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+
+  .pricing-card {
+    padding: 1.2rem .8rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
+
+  .price small {
+    font-size: .85rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: .85rem;
+  }
+
+  .contact-section {
+    padding: 2rem .6rem;
+  }
+
+  .contact-section form input,
+  .contact-section form textarea,
+  .contact-section form select,
+  .contact-section form button {
+    font-size: .9rem;
+    padding: .8rem;
+  }
+
+  footer {
+    padding: 1.5rem .6rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  .faq-question {
+    font-size: .9rem;
+    padding: 1rem;
+  }
+
+  .faq-answer {
+    font-size: .85rem;
+  }
+}
+
+/* --- Anti-coupure générale sur tous les écrans --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Containers toujours visibles et centrés --- */
+.container {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+}
+
+/* --- Fix pour les bordures visibles même sur petit écran --- */
+.card, .feature-card, .pricing-card, .testimonial, .faq-item {
+  border: 1px solid rgba(255,255,255,.08);
+  box-sizing: border-box;
+}
+.hero {
+  position: relative;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.hero.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+  pointer-events: none;
 }
