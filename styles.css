@@ -100,7 +100,7 @@ header.site-header {
 @media (max-width: 820px) {   
   .menu-toggle { display:block; }   
   .navlinks {     
-    position: fixed; inset: 50px 0 auto 0; background: rgba(16,14,11,.98);     
+    position: fixed; inset: 80px 0 auto 0; background: rgba(16,14,11,.98);     
     padding: 1rem; border-bottom: 1px solid rgba(255,255,255,.06);     
     transform: translateY(-120%); transition: transform .25s ease;     
     flex-direction: column; gap: .6rem;   
