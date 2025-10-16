@@ -97,16 +97,54 @@ header.site-header {
   display: none;
   transition: 0.4s;
 }
-@media (max-width: 820px) {   
-  .menu-toggle { display:block; }   
-  .navlinks {     
-    position: fixed; inset: 50px 0 auto 0; background: rgba(16,14,11,.98);     
-    padding: 1rem; border-bottom: 1px solid rgba(255,255,255,.06);     
-    transform: translateY(-120%); transition: transform .25s ease;     
-    flex-direction: column; gap: .6rem;   
-  }   
-  .navlinks.open { transform: translateY(0%); } 
-}  
+/* @media (max-width: 820px) {    */
+  /* .menu-toggle { display:block; }    */
+  @media (max-width: 820px) {
+  .menu-toggle {
+    display: block; 
+    background: none; 
+    border: none; 
+    color: var(--light); 
+    font-size: 2rem; 
+    cursor: pointer;
+  }
+
+  .navlinks {
+    position: fixed;
+    top: 80px; /* distance depuis le haut du header */
+    left: 0;
+    right: 0;
+    background: rgba(16,14,11,0.98);
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.6rem;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    z-index: 100;
+  }
+
+  .navlinks.open {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navlinks a {
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    text-align: center;
+  }
+
+  .navlinks a:hover,
+  .navlinks a.active {
+    background: var(--primary);
+    color: var(--dark);
+  }
+}
+ 
 
 /* --- Hero --- */
 .hero {   
