@@ -111,7 +111,7 @@ header.site-header {
 
   .navlinks {
     position: fixed;
-    top: 80px; /* distance depuis le haut du header */
+    top: 60px; /* distance depuis le haut du header */
     left: 0;
     right: 0;
     background: rgba(16,14,11,0.98);
@@ -257,7 +257,7 @@ header.site-header {
 .testimonial .eumeu { background: url('./img/eumeu.jpeg') center/cover no-repeat; } 
 .testimonial .fallou { background: url('./img/fallou.png') center/cover no-repeat; } 
 .testimonial .cheick { background: url('./img/cheikh.jpg') center/cover no-repeat; } 
-.testimonial .bamba { background: url('./img/eumeu.jpeg') center/cover no-repeat; } 
+.testimonial .bamba { background: url('./img/muscul.jpg') center/cover no-repeat; } 
 
 .testimonial .name { font-weight: 700; } 
 .testimonial .role { opacity: .8; font-size: .95rem; }  
@@ -903,4 +903,7 @@ img, video, iframe {
   opacity: 0;
   transform: translateY(-50px);
   pointer-events: none;
+}
+.orange{
+  border: 1px solid var(--primary);
 }
